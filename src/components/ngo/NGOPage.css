@@ -1,0 +1,19 @@
+.ngo {
+  padding-left: 100px;
+  padding-right: 60px;
+  align-items: center;
+}
+
+.ngo .ngo-img {
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.ngo-carts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

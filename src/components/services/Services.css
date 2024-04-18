@@ -1,0 +1,37 @@
+/* styles.css */
+.services-page {
+    padding: 20px;
+  }
+  
+  .services-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .service-card {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .service-card:hover{
+    box-shadow: black;
+    background-color: aqua;
+  }
+  
+  .service-icon {
+    margin-bottom: 10px;
+  }
+  
+  .service-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .service-description {
+    font-size: 14px;
+  }
+  
