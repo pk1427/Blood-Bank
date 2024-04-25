@@ -11,25 +11,16 @@ import Services from "./components/services/Services";
 
 import Request_blood from "./components/request/Request_blood";
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Routes,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   const [user, setLoginUser] = useState({});
   return (
     <div>
       <Router>
-
-
-        <Navbar user={user}/>
+        <Navbar user={user} />
         <Routes>
           {/* <Route path="/" element={<Navbar />} /> */}
-          
-
 
           <Route path="/" element={<Hero />} />
 
@@ -56,9 +47,8 @@ function App() {
           <Route path="/donars" element={<Donars />} />
 
           <Route path="/ngo" element={<NGOPage />} />
-          
-          <Route path="/request" element={<Request_blood />} />
 
+          <Route path="/request" element={<Request_blood />} />
         </Routes>
       </Router>
     </div>

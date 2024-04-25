@@ -1,20 +1,18 @@
 import React, { useState } from "react";
 import "./Hero.css";
+import { NavLink } from "react-router-dom";
 
 const SearchBar = () => {
   const [searchInput, setSearchInput] = useState("");
   const [bloodType, setBloodType] = useState("");
-  const [suggestions, setSuggestions] = useState([{}]);
+  const [suggestions, setSuggestions] = useState([]);
 
   const handleSearch = () => {
-    // You can perform the search logic here based on searchInput and bloodType
-    // For demonstration, let's just log the values
     console.log("Search Input:", searchInput);
     console.log("Selected Blood Type:", bloodType);
   };
 
   const handleLocationChange = async (e) => {
-    e.preventDefault();
     setSearchInput(e.target.value);
 
     await fetch(
@@ -22,14 +20,23 @@ const SearchBar = () => {
     )
       .then((response) => response.json())
       .then((result) => {
-        const {features} = result;
+        const { features } = result;
         setSuggestions(features);
       })
       .catch((error) => console.log("error", error));
   };
 
+  const handleSuggestionClick = (city) => {
+    setSearchInput(city);
+    setSuggestions([]); // Clear suggestions after selection
+  };
+
   return (
     <div className="hero">
+      <div className="main-text">
+        <h1>A DROP OF BLOOD CAN SAVES ONES LIFE</h1>
+      </div>
+
       <div className="search-container">
         <input
           type="text"
@@ -37,29 +44,39 @@ const SearchBar = () => {
           value={searchInput}
           onChange={handleLocationChange}
         />
-        {
-          suggestions?.map((loc, index)=>(
-            <div key={index}>
-              {loc?.properties?.city}
-            </div>
-          ))
-        }
+        {suggestions?.length > 0 && (
+          <div className="suggestions">
+            {suggestions?.map((loc, index) => {
+              const city = loc.properties.city;
+              return (
+                <div
+                  key={index}
+                  className="suggestion"
+                  onClick={() => handleSuggestionClick(city)}
+                >
+                  {city}
+                </div>
+              );
+            })}
+          </div>
+        )}
         <select
           value={bloodType}
           onChange={(e) => setBloodType(e.target.value)}
         >
           <option value="">Select Blood Type</option>
-          <option value="A">A+</option>
-          <option value="A+">A-</option>
-          <option value="B">B+</option>
-          <option value="B+">B-</option>
-          <option value="B+">o+</option>
-          <option value="B+">o-</option>
-          <option value="B+">AB+</option>
-          <option value="B+">AB-</option>
-          {/* Add more blood types as needed */}
+          <option value="A+">A+</option>
+          <option value="A-">A-</option>
+          <option value="B+">B+</option>
+          <option value="B-">B-</option>
+          <option value="O+">O+</option>
+          <option value="O-">O-</option>
+          <option value="AB+">AB+</option>
+          <option value="AB-">AB-</option>
         </select>
-        <button onClick={handleSearch}>Search</button>
+        <NavLink to="/ngo">
+          <button onClick={handleSearch}>Search</button>
+        </NavLink>
       </div>
     </div>
   );

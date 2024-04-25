@@ -126,64 +126,6 @@ const NGOPage = () => {
               </ul>
             </div>
           </div>
-
-          <div className="ngo4">
-            <h2>Our NGO: Save Lives Foundation</h2>
-            <p>
-              Welcome to Save Lives Foundation! We are dedicated to saving lives
-              through blood donation, medical assistance, and community outreach
-              programs.
-            </p>
-            <div className="details">
-              <h3>Details</h3>
-              <ul>
-                <li>
-                  <strong>Founder:</strong> John Smith
-                </li>
-                <li>
-                  <strong>Location:</strong> 123 Main Street, Cityville
-                </li>
-                <li>
-                  <strong>Email:</strong> info@savelivesfoundation.org
-                </li>
-                <li>
-                  <strong>Phone:</strong> +1 (123) 456-7890
-                </li>
-                <li>
-                  <strong>Website:</strong> www.savelivesfoundation.org
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="ngo5">
-            <h2>Our NGO: Save Lives Foundation</h2>
-            <p>
-              Welcome to Save Lives Foundation! We are dedicated to saving lives
-              through blood donation, medical assistance, and community outreach
-              programs.
-            </p>
-            <div className="details">
-              <h3>Details</h3>
-              <ul>
-                <li>
-                  <strong>Founder:</strong> John Smith
-                </li>
-                <li>
-                  <strong>Location:</strong> 123 Main Street, Cityville
-                </li>
-                <li>
-                  <strong>Email:</strong> info@savelivesfoundation.org
-                </li>
-                <li>
-                  <strong>Phone:</strong> +1 (123) 456-7890
-                </li>
-                <li>
-                  <strong>Website:</strong> www.savelivesfoundation.org
-                </li>
-              </ul>
-            </div>
-          </div>
         </div>
       </div>
       <div>

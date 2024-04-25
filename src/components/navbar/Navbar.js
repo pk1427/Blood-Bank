@@ -26,7 +26,7 @@ const Navbar = ({user}) => {
       <ul className={active}>
         <li className="nav_item">
           {" "}
-          <a href="/home" className="nav_link">
+          <a href="/" className="nav_link">
             Home
           </a>
         </li>

@@ -1,43 +1,96 @@
 /* Hero.css */
 
 .hero {
-    background-image: url(../../assets/images/main_bg.png);
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  
+  /* background-image: url(../../assets/images/main_bg.png); */
+  background-color: rgb(15, 15, 15);
+  background-size: cover;
+  background-position: center;
+  height: 92vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.main-text{
+  padding-bottom: 70px;
+  font-weight: 600;
+  font-size: larger;
+}
+
+.main-text h1{
+  color: #be1a1a;
+}
+
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+}
+
+.search-container input {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search-container select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search-container .suggestions {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.search-container .suggestion {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.search-container .suggestion:hover {
+  background-color: #f0f0f0;
+}
+
+.search-container button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-container button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
   .search-container {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
-  
-  input[type="text"], select {
-    padding: 10px;
-    margin-right: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
+
+  .search-container input {
+    width: 200px;
   }
-  
-  button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
+
+  .search-container select {
+    width: 150px;
   }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
+}
