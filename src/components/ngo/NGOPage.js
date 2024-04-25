@@ -1,5 +1,3 @@
-// NGOPage.js
-
 import ngoImage from "../../assets/images/NGOs.jpg";
 import "./NGOPage.css";
 
@@ -10,7 +8,6 @@ const NGOPage = () => {
     { name: "NGO 1", email: "ngo1@example.com" },
     { name: "NGO 2", email: "ngo2@example.com" },
     { name: "NGO 3", email: "ngo3@example.com" },
-    // Add more NGOs as needed
   ]);
 
   const [newNgo, setNewNgo] = useState({
@@ -25,9 +22,7 @@ const NGOPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Implement NGO registration logic here
     console.log("New NGO Data:", newNgo);
-    // Reset form fields after submission if needed
     setNewNgo({
       name: "",
       email: "",
@@ -128,7 +123,15 @@ const NGOPage = () => {
           </div>
         </div>
       </div>
-      <div>
+
+      <div className="reg-ngo-text">
+        <h1>
+          Organise your NGO and
+          <br></br> facilitate blood procurement
+        </h1>
+      </div>
+
+      <div className="ngoreg-form">
         <h2>Register New NGO</h2>
         <form onSubmit={handleSubmit}>
           <label htmlFor="name">NGO Name:</label>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Donars.css"
+import "./Donars.css";
 
 const DonorsPage = () => {
   const [searchInput, setSearchInput] = useState("");
@@ -10,64 +10,61 @@ const DonorsPage = () => {
     urgency: "",
   });
 
-  const handleSearch = () => {
-    // Implement search logic here
-  };
+  const handleSearch = () => {};
 
-  const handleSubmitRequest = () => {
-    // Implement form submission logic for blood request
-  };
+  const handleSubmitRequest = () => {};
 
   return (
-    <div className="donors-page">
-      <h2>Find Donors</h2>
-      <div className="search-bar">
-        <input
-          type="text"
-          placeholder="Search for donors..."
-          value={searchInput}
-          onChange={(e) => setSearchInput(e.target.value)}
-        />
-        <select
-          value={bloodType}
-          onChange={(e) => setBloodType(e.target.value)}
-        >
-          <option value="">Select Blood Type</option>
-          <option value="A">A</option>
-          <option value="B">B</option>
-          {/* Add more blood types as needed */}
-        </select>
-        <button onClick={handleSearch}>Search</button>
-      </div>
-
-      <div className="donor-list">
-        <div className="donor-profile">
-          <h3>John Doe</h3>
-          <p>Blood Type: A+</p>
-          <p>Contact: 1234567890</p>
+    <div className="donar-page">
+      <div className="donors-page">
+        <h2>Find Donors</h2>
+        <div className="search-bar">
+          <input
+            type="text"
+            placeholder="Search for donors..."
+            value={searchInput}
+            onChange={(e) => setSearchInput(e.target.value)}
+          />
+          <select
+            value={bloodType}
+            onChange={(e) => setBloodType(e.target.value)}
+          >
+            <option value="">Select Blood Type</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+          </select>
+          <button onClick={handleSearch}>Search</button>
         </div>
 
-        
-        <div className="donor-profile">
-          <h3>John Doe</h3>
-          <p>Blood Type: A+</p>
-          <p>Contact: 1234567890</p>
+        <div className="donor-list">
+          <div className="donor-profile">
+            <h3>Aniket</h3>
+            <p>Blood Type: A+</p>
+            <p>Contact: 8876564557</p>
+            <p>location:Delhi</p>
+          </div>
+
+          <div className="donor-profile">
+            <h3>Pavan</h3>
+            <p>Blood Type: O+</p>
+            <p>Contact: 9022333344</p>
+            <p>location:Pune</p>
+          </div>
+
+          <div className="donor-profile">
+            <h3>Prasad</h3>
+            <p>Blood Type: B+</p>
+            <p>Contact: 8805678976</p>
+            <p>location:Ahemdabad</p>
+          </div>
         </div>
-
-
-        <div className="donor-profile">
-          <h3>John Doe</h3>
-          <p>Blood Type: A+</p>
-          <p>Contact: 1234567890</p>
-        </div>
-
-        {/* Render multiple instances of DonorProfile component */}
       </div>
-      <h2>Donation History</h2>
-      <div className="donation-history">
-        {/* Display donation history here */}
-      </div>
-      
     </div>
   );
 };

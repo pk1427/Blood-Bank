@@ -50,10 +50,10 @@ const ServicesPage = () => {
           title="NGO"
           description="Submit requests for blood donations based on your needs."
           Click={() => handleClick("ngo")}
-          //   icon={<IconDonationRequest />}
         />
-        {/* Add more ServiceCard components for other services */}
       </div>
+
+      
     </div>
   );
 };

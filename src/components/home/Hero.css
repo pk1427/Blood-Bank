@@ -1,7 +1,4 @@
-/* Hero.css */
-
 .hero {
-  /* background-image: url(../../assets/images/main_bg.png); */
   background-color: rgb(15, 15, 15);
   background-size: cover;
   background-position: center;
@@ -14,13 +11,13 @@
   padding: 20px;
 }
 
-.main-text{
+.main-text {
   padding-bottom: 70px;
   font-weight: 600;
   font-size: larger;
 }
 
-.main-text h1{
+.main-text h1 {
   color: red;
 }
 

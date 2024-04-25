@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 
-import "./Request_blood.css"
+import "./Request_blood.css";
 
 const BloodRequestForm = () => {
   const [formData, setFormData] = useState({
@@ -21,9 +21,7 @@ const BloodRequestForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Implement form submission logic here
     console.log("Form Data:", formData);
-    // Reset form fields after submission if needed
     setFormData({
       name: "",
       email: "",
@@ -35,61 +33,65 @@ const BloodRequestForm = () => {
   };
 
   return (
-    <div>
-      <h2>Blood Request Form</h2>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Your Name:</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-        />
+    <div className="main-form-rq">
+      {" "}
+      <div className="blood-req-form">
+        <h2>Blood Request Form</h2>
 
-        <label htmlFor="email">Your Email:</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
+        <form onSubmit={handleSubmit}>
+          <label htmlFor="name">Your Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
 
-        <label htmlFor="bloodType">Blood Type:</label>
-        <input
-          type="text"
-          id="bloodType"
-          name="bloodType"
-          value={formData.bloodType}
-          onChange={handleChange}
-          required
-        />
+          <label htmlFor="email">Your Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
 
-        <label htmlFor="quantity">Quantity:</label>
-        <input
-          type="text"
-          id="quantity"
-          name="quantity"
-          value={formData.quantity}
-          onChange={handleChange}
-          required
-        />
+          <label htmlFor="bloodType">Blood Type:</label>
+          <input
+            type="text"
+            id="bloodType"
+            name="bloodType"
+            value={formData.bloodType}
+            onChange={handleChange}
+            required
+          />
 
-        <label htmlFor="urgency">Urgency:</label>
-        <input
-          type="text"
-          id="urgency"
-          name="urgency"
-          value={formData.urgency}
-          onChange={handleChange}
-          required
-        />
+          <label htmlFor="quantity">Quantity:</label>
+          <input
+            type="text"
+            id="quantity"
+            name="quantity"
+            value={formData.quantity}
+            onChange={handleChange}
+            required
+          />
 
-        <button type="submit">Submit Request</button>
-      </form>
+          <label htmlFor="urgency">Urgency:</label>
+          <input
+            type="text"
+            id="urgency"
+            name="urgency"
+            value={formData.urgency}
+            onChange={handleChange}
+            required
+          />
+
+          <button type="submit">Submit Request</button>
+        </form>
+      </div>
     </div>
   );
 };
