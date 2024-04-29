@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-
-
 import "./LoginForm.css";
+import { dividerClasses } from "@mui/material";
 
 const LoginForm = (props) => {
   const [user, setUser] = useState({
@@ -46,7 +45,7 @@ const LoginForm = (props) => {
       console.log(data.message);
       setIsLoggedIn(true);
       props.userCallBack({ email: user.email });
-      window.location.href = '/';
+      window.location.href = "/";
       // setLoginUser(data.user);
 
       // axios.post();
@@ -56,7 +55,8 @@ const LoginForm = (props) => {
   };
 
   return (
-    <div className="wrapper">
+    <div className="login-page">
+       <div className="wrapper">
       <form action="">
         <h1>LOGIN</h1>
 
@@ -83,9 +83,6 @@ const LoginForm = (props) => {
           />
         </div>
 
-
-        
-
         <div className="remember-forgot">
           <a href="#">Forgot Password</a>
 
@@ -101,6 +98,8 @@ const LoginForm = (props) => {
         </div>
       </form>
     </div>
+    </div>
+   
   );
 };
 

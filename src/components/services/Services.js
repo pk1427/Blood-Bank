@@ -48,7 +48,7 @@ const ServicesPage = () => {
 
         <ServiceCard
           title="NGO"
-          description="Submit requests for blood donations based on your needs."
+          description="Register your NGO, And fulfill blood donations on  needs."
           Click={() => handleClick("ngo")}
         />
       </div>

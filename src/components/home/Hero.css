@@ -13,12 +13,12 @@
 
 .main-text {
   padding-bottom: 70px;
-  font-weight: 600;
   font-size: larger;
 }
 
 .main-text h1 {
   color: red;
+  font-size: 70px;
 }
 
 

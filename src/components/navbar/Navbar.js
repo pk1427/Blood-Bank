@@ -48,7 +48,7 @@ const Navbar = ({user}) => {
 
       <div className="signup-login">
         {user.email ? <>{user.email}</> :<NavLink to="/Login" className="signup">
-          Login
+          <button>Login</button>
         </NavLink>}
       </div>
     </div>
